@@ -68,4 +68,13 @@ file {
   group => root,
   require => Exec["unpack_hadoop"]
  }
+
+  file {
+  "/etc/profile.d/hadoop.sh":
+  source => "puppet:///modules/hadoop/hadoop.sh",
+  mode => 644,
+  owner => root,
+  group => root,
+  require => Exec["unpack_hadoop"]
+ }
 }

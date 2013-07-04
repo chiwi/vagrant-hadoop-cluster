@@ -43,3 +43,23 @@ ssh_authorized_key { "ssh_key":
     user   => "root",
     require => File['/root/.ssh/id_rsa.pub']
 }
+
+host { 'master':
+    ip => '10.155.8.100',
+}
+host { 'hadoop1':
+    ip => '10.155.8.101',
+}
+host { 'hadoop2':
+    ip => '10.155.8.102',
+}
+host { 'hadoop3':
+    ip => '10.155.8.103',
+}
+host { 'hadoop4':
+    ip => '10.155.8.104',
+}
+host { 'hadoop5':
+    ip => '10.155.8.105',
+}
+
