@@ -1,16 +1,13 @@
-vagrant-hadoop-cluster
+Vagrant-Hadoop-Cluster
 ======================
 
-Deploying hadoop in a virtualized cluster in simple steps
+This project is used to deploy a simple hadoop cluster, in a public network with static IPs.
 
-These are the files that support the blogpost http://cscarioni.blogspot.co.uk/2012/09/setting-up-hadoop-virtual-cluster-with.html
+It's based on Hadoop 1.1.2, vagrant 1.2.2 and sqoop 1.4.3
 
-For using them.
+Since Vagrant 1.2.2 does not have support for static IPs in public networks, I've created a patch based on fix in https://github.com/jheise/vagrant/commit/7a89ab7fadfd6dcd46d3cdb7d960912d3f2c126f
 
-Simply clone the repository, then
+To run simply "vagrant up" will boot one master and 5 slaves, 
+or vagrant up master hadoop1 to boot one master and one slave only.
 
-gem install vagrant 
-
-vagrant box add base-hadoop http://files.vagrantup.com/lucid64.box
-
-vagrant up
+the VMs run Lucid64 box

@@ -1,4 +1,6 @@
 include hadoop
+include sqoop
+
 group { "puppet":
   ensure => "present",
 }
